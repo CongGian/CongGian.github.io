@@ -89,13 +89,20 @@
         .icons {
             text-align: center;
             padding: 20px 0;
+            background: #f8f8f8;
+            margin-top: 20px;
         }
         .icons a {
             margin: 0 10px;
             color: #444;
+            text-decoration: none;
         }
         .icons i {
             font-size: 2em;
+            transition: color 0.3s;
+        }
+        .icons a:hover i {
+            color: #e8491d;
         }
         @media(max-width: 768px) {
             header h1, .showcase h1 {
