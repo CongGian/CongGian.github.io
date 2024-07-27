@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: #f8f8f8;
         }
         .container {
             width: 80%;
@@ -22,81 +22,85 @@
             overflow: hidden;
         }
         header {
-            background: #35424a;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
         }
-        header a {
-            color: #ffffff;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
         }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header ul li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        section#showcase {
-            min-height: 400px;
-            background: url('images/showcase.jpg') no-repeat 0 -400px;
+        .showcase {
+            background: #333 url('images/showcase.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 400px;
             text-align: center;
-            color: #ffffff;
+            padding-top: 100px;
         }
-        section#showcase h1 {
-            margin-top: 100px;
+        .showcase h1 {
             font-size: 55px;
             margin-bottom: 10px;
         }
-        section#showcase p {
+        .showcase p {
             font-size: 20px;
         }
-        footer {
-            background: #35424a;
-            color: #ffffff;
-            text-align: center;
-            padding: 30px;
-            margin-top: 30px;
-        }
-        .box {
+        .content {
             padding: 20px;
-            background: #ffffff;
-            margin-top: 20px;
         }
-        .box h2 {
+        .content h2 {
+            text-align: center;
             margin-top: 0;
         }
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
+        .about, .publications, .contact {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .main-content .box {
-            flex: 1;
-            margin: 10px;
-        }
-        .profile-picture {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .profile-picture img {
+        .about img {
+            float: left;
+            margin-right: 20px;
             border-radius: 50%;
-            max-width: 200px;
+            max-width: 150px;
+        }
+        .about:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer .icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        @media(max-width: 768px) {
+            header h1, .showcase h1 {
+                font-size: 2em;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -105,24 +109,24 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div id="branding">
-                <h1>Cong Gian, Ph.D. Candidate</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
-                    <li><a href="datascript.html">Data and Scripts</a></li>
-                    <li><a href="personal/CongGian_CurriculumVitae_May2023.pdf" download>CV</a></li>
-                    <li><a href="hobby.html">My Hobbies</a></li>
-                </ul>
-            </nav>
+            <h1>Cong Gian, Ph.D. Candidate</h1>
         </div>
     </header>
 
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="active">Home</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="datascript.html">Data and Scripts</a>
+            <a href="personal/CongGian_CurriculumVitae_May2023.pdf" download>CV</a>
+            <a href="hobby.html">My Hobbies</a>
+        </div>
+    </nav>
+
     <!-- Showcase -->
-    <section id="showcase">
+    <section class="showcase">
         <div class="container">
             <h1>Welcome to My Academic Website!</h1>
             <p>I am Cong Gian, a Ph.D. Candidate in Public Affairs at Indiana University, Bloomington.</p>
@@ -130,37 +134,31 @@
     </section>
 
     <!-- Main Content -->
-    <div class="container main-content">
-        <!-- About Me -->
-        <div class="box">
-            <div class="profile-picture">
-                <!-- Placeholder for your picture -->
-                <img src="images/avatar_placeholder.jpg" alt="Profile Picture">
-                <!-- Replace 'avatar_placeholder.jpg' with your actual image file name -->
-            </div>
+    <div class="container content">
+        <!-- About Me Section -->
+        <section class="about">
+            <img src="images/avatar_placeholder.jpg" alt="Profile Picture">
             <h2>About Me</h2>
-            <p>
-                I am a dedicated scholar with a passion for applied research. My expertise lies in analyzing complex data sets to uncover insights and trends, which I then use to inform my research on health economics, labor economics, and health policy. Alongside my research, I am committed to teaching and sharing my knowledge with others. I strive to make a positive impact in my field and am always eager to learn and grow.
-            </p>
+            <p>I am a dedicated scholar with a passion for applied research. My expertise lies in analyzing complex data sets to uncover insights and trends, which I then use to inform my research on health economics, labor economics, and health policy. Alongside my research, I am committed to teaching and sharing my knowledge with others. I strive to make a positive impact in my field and am always eager to learn and grow.</p>
             <a href="hobby.html" class="button">Learn More about Me</a>
-        </div>
+        </section>
 
-        <!-- Publications -->
-        <div class="box">
+        <!-- Publications Section -->
+        <section class="publications">
             <h2>Publications</h2>
-            <div class="publication">
+            <article>
                 <h3><a href="https://www.sciencedirect.com/science/article/pii/S0272775719301839?via%3Dihub">Does the Healthcare Educational Market Respond to Short-run Local Demand?</a></h3>
                 <p>with Marcus Dillender, Andrew Friedson, and Kosali Simon, <em>Economics of Education Review</em>, 2019.</p>
-            </div>
-            <div class="publication">
+            </article>
+            <article>
                 <h3><a href="https://journals.sagepub.com/doi/full/10.1177/00469580211060260">Is Healthcare Employment Resilient and “Recession Proof”?</a></h3>
                 <p>with Marcus Dillender, Andrew Friedson, and Kosali Simon, <em>INQUIRY: The Journal of Health Care Organization, Provision, and Financing</em>, 2021.</p>
-            </div>
+            </article>
             <a href="research.html" class="button">List of Publications and Working Papers</a>
-        </div>
+        </section>
 
-        <!-- Contact -->
-        <div class="box">
+        <!-- Contact Section -->
+        <section class="contact">
             <h2>Contact Me</h2>
             <p>If you have any questions about my research or the data and code repository, feel free to contact me using the information below.</p>
             <form method="post" action="send_message.php">
@@ -183,7 +181,7 @@
                 <li><strong>Phone:</strong> 812-369-2198</li>
                 <li><strong>Email:</strong> <a href="mailto:tgian@indiana.edu">tgian@indiana.edu</a></li>
             </ul>
-        </div>
+        </section>
     </div>
 
     <!-- Footer -->
