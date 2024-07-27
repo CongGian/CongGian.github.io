@@ -57,7 +57,7 @@
             text-align: center;
             margin-top: 0;
         }
-        .about, .publications, .contact {
+        .about, .publications, .teaching, .working-papers {
             background: #fff;
             padding: 20px;
             margin: 20px 0;
@@ -86,6 +86,17 @@
             margin: 0 10px;
             text-decoration: none;
         }
+        .icons {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .icons a {
+            margin: 0 10px;
+            color: #444;
+        }
+        .icons i {
+            font-size: 2em;
+        }
         @media(max-width: 768px) {
             header h1, .showcase h1 {
                 font-size: 2em;
@@ -96,6 +107,7 @@
             }
         }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -149,42 +161,32 @@
             <a href="research.html" class="button">List of Publications and Working Papers</a>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <p>If you have any questions about my research or the data and code repository, feel free to contact me using the information below.</p>
-            <form method="post" action="send_message.php">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-            <ul class="contact-info">
-                <li><strong>Address:</strong> Indiana University, Bloomington, IN 47408, United States</li>
-                <li><strong>Phone:</strong> 812-369-2198</li>
-                <li><strong>Email:</strong> <a href="mailto:tgian@indiana.edu">tgian@indiana.edu</a></li>
-            </ul>
+        <!-- Teaching Section -->
+        <section class="teaching">
+            <h2>Teaching</h2>
+            <p>I am committed to teaching and sharing my knowledge with students. My teaching interests include health economics, labor economics, and applied econometrics. I strive to create an engaging learning environment that fosters critical thinking and practical application of theoretical concepts.</p>
+            <a href="teaching.html" class="button">Learn More about My Teaching</a>
         </section>
+
+        <!-- Working Papers Section -->
+        <section class="working-papers">
+            <h2>Working Papers</h2>
+            <p>Here you will find a list of my current working papers. These papers represent ongoing research projects that I am actively developing. I welcome feedback and collaboration opportunities from fellow researchers and academics.</p>
+            <a href="workingpapers.html" class="button">View My Working Papers</a>
+        </section>
+
+        <!-- Social Media and CV Links -->
+        <div class="icons">
+            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=yourgoogleid" target="_blank"><i class="fab fa-google"></i></a>
+            <a href="personal/CongGian_CurriculumVitae_May2023.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <ul class="icons">
-                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            </ul>
             <p>&copy; Cong Thanh Gian</p>
         </div>
     </footer>
